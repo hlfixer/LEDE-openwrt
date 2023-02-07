@@ -1,0 +1,33 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option charset 'UTF-8'
+	option description 'Samba on OpenWRT'
+	option name 'LEDE'
+	option homes '0'
+	option macos '0'
+
+config sambashare
+	option auto '1'
+	option path '/mnt/sdb1'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0666'
+	option dir_mask '0777'
+	option device 'sdb1'
+	option inherit_owner 'yes'
+	option name 'LEDE'
+	option force_root '1'
+
+config sambashare
+	option auto '1'
+	option name 'sda1'
+	option path '/mnt/sda1'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0666'
+	option dir_mask '0777'
+	option device 'sda1'
+	option inherit_owner 'yes'
+	option browseable 'no'
+
